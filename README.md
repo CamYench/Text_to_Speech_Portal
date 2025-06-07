@@ -1,4 +1,4 @@
-Local Sesame Web App
+# Local Sesame Web App
 A local web application for interacting with the Sesame Conversational Speech Model (CSM-1B), providing text-to-speech, voice cloning, and conversation mode with a local Ollama LLM instance. Optimized for macOS with M2 Max chip using Metal GPU acceleration.
 Features
 
