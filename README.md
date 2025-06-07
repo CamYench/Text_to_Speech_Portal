@@ -12,7 +12,7 @@ A local web application for interacting with the Sesame Conversational Speech Mo
 - **M2 Max Optimization**: Leverages Metal Performance Shaders (MPS) for GPU acceleration.
 
 ## Prerequisites
-- **Hardware**: Mac with M2 Max chip.
+- **Hardware**: Mac with M1 and above
 - **Software**:
   - Python 3.10+
   - Node.js 18+
