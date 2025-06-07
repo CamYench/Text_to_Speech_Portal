@@ -5,14 +5,23 @@ import numpy as np
 import audiofile
 import os
 import requests
+import sentencepiece as spm
 
 app = Flask(__name__)
 CORS(app)
 
 # Initialize Sesame CSM-1B model with MLX
 csm = CSM(csm_1b())
-weight_path = "weights/model.safetensors"  # Path to weights in project directory
+weight_path = "weights/ckpt.safetensors"
 csm.load_weights(weight_path)
+
+# Load SentencePiece tokenizer (if required)
+tokenizer_path = "weights/sentencepiece.bpe.model"
+sp = None
+if os.path.exists(tokenizer_path):
+    sp = spm.SentencePieceProcessor(model_file=tokenizer_path)
+else:
+    print("Warning: sentencepiece.bpe.model not found. Tokenization may fail if not embedded in model.")
 
 # Local storage for voice profiles
 voice_profiles = {}
