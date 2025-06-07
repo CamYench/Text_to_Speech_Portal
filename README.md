@@ -26,7 +26,7 @@ A local web application for interacting with the Sesame Conversational Speech Mo
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/CamYench/Text_to_Speech_Portal>
    cd sesame-web-app
    ```
 
