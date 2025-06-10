@@ -1,4 +1,10 @@
-flask-cors
-flask
-git+https://github.com/senstella/csm-mlx@master
-git+https://github.com/openai/whisper.git
+torch>=2.0.0
+torchaudio>=2.6.0
+transformers>=4.30.0
+huggingface-hub>=0.15.0
+tokenizers>=0.13.0
+streamlit>=1.30.0
+moshi==0.2.2
+torchtune==0.4.0
+torchao==0.9.0
+silentcipher @ git+https://github.com/SesameAILabs/silentcipher@master
