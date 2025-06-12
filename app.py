@@ -40,8 +40,24 @@ def load_persona(persona_dir):
         st.error(f"Invalid JSON in {transcript_path}")
         return []
     
+    # Only use these 10 samples for context
+    selected_files = [
+        "Sample1.wav",
+        "Sample6.wav",
+        "Sample11.wav",
+        "Sample13.wav",
+        "Sample17.wav",
+        "Sample18.wav",
+        "Sample20.wav",
+        "Sample31.wav",
+        "Sample36.wav",
+        "Sample39.wav",
+    ]
+    
     segments = []
     for item in transcript_data:
+        if item['audio_file'] not in selected_files:
+            continue
         audio_path = persona_path / item['audio_file']
         if not audio_path.exists():
             st.warning(f"Audio file {item['audio_file']} not found in {persona_dir}")
