@@ -40,18 +40,28 @@ def load_persona(persona_dir):
         st.error(f"Invalid JSON in {transcript_path}")
         return []
     
-    # Only use these 10 samples for context
+    # Only use these 20 samples for context
     selected_files = [
         "Sample1.wav",
+        "Sample2.wav",
+        "Sample3.wav",
+        "Sample4.wav",
+        "Sample5.wav",
         "Sample6.wav",
+        "Sample7.wav",
+        "Sample8.wav",
+        "Sample9.wav",
+        "Sample10.wav",
         "Sample11.wav",
+        "Sample12.wav",
         "Sample13.wav",
+        "Sample14.wav",
+        "Sample15.wav",
+        "Sample16.wav",
         "Sample17.wav",
         "Sample18.wav",
+        "Sample19.wav",
         "Sample20.wav",
-        "Sample31.wav",
-        "Sample36.wav",
-        "Sample39.wav",
     ]
     
     segments = []
@@ -62,7 +72,6 @@ def load_persona(persona_dir):
         if not audio_path.exists():
             st.warning(f"Audio file {item['audio_file']} not found in {persona_dir}")
             continue
-            
         try:
             audio_tensor, sample_rate = torchaudio.load(str(audio_path))
             audio_tensor = torchaudio.functional.resample(
@@ -70,7 +79,6 @@ def load_persona(persona_dir):
                 orig_freq=sample_rate, 
                 new_freq=24000  # CSM model's sample rate
             )
-            
             segment = Segment(
                 text=item['text'],
                 speaker=0,  # All segments use speaker 0
