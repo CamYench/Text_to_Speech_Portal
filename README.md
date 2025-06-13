@@ -1,8 +1,7 @@
 # Open Sesame - Voice Generation App
-<img width="650" alt="Screenshot 2025-06-13 at 4 10 37 PM" src="https://github.com/user-attachments/assets/4badc795-f1eb-4c31-b168-5f931e5f330f" />
-
-
 Open Sesame is a Streamlit-based web application that generates natural-sounding speech using the CSM (Conditional Speech Model). The application allows users to generate speech in different personas' voices by providing text input.
+
+<img width="650" alt="Screenshot 2025-06-13 at 4 10 37 PM" src="https://github.com/user-attachments/assets/4badc795-f1eb-4c31-b168-5f931e5f330f" />
 
 ## Features
 
